@@ -30,45 +30,39 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*==================== PORTFOLIO SWIPE  ====================*/
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-    }
-    x[slideIndex-1].style.display = "block";
-}
-
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
     const scrollY = window.pageYOffset
 
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
+    // Remove all active classes first
+    document.querySelectorAll('.nav_link').forEach(link => {
+        link.classList.remove('active-link')
+    })
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
-            document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.remove('active-link')
+    // Find the current section
+    let currentSection = ''
+
+    sections.forEach(current => {
+        const sectionTop = current.offsetTop - 300
+        const sectionId = current.getAttribute('id')
+
+        if (scrollY >= sectionTop) {
+            currentSection = sectionId
         }
     })
+
+    // Add active class to current section link
+    const activeLink = document.querySelector('.nav_link[href="#' + currentSection + '"]')
+    if (activeLink) {
+        activeLink.classList.add('active-link')
+    }
 }
 
 window.addEventListener('scroll', scrollActive)
+// Call on page load
+scrollActive()
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/ 
 function scrollHeader(){
@@ -84,26 +78,3 @@ function scrollUp(){
     if(this.scrollY >= 460) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp )
-
-/*==================== DARK LIGHT THEME ====================*/
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'uil-sun'
-
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
-
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
-
-if (selectedTheme) {
-    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-    themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
-}
-
-themeButton.addEventListener('click', () => {
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
-})

@@ -23,58 +23,45 @@
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
-                <img src="assets/img/logo.png" alt="logo" style="height: auto; width: 90px; margin-left: -28px;">
+                <img src="assets/img/logo.png" alt="logo" class="nav_logo_img" style="height: auto; width: 90px; margin-left: -28px;">
 
                 <div class="nav_menu" id="nav-menu">
                 <ul class="nav_list grid">
                     <li class="nav_item">
-                        <a href="#home" class="nav_link active-link">
-                            <i class="uil uil-estate nav_icon"></i>HOME
+                        <a href="#home" class="nav_link">
+                            <i class="uil uil-estate nav_icon"></i>
+                            <span class="nav_label">Home</span>
                         </a>
                     </li>
 
                     <li class="nav_item">
                         <a href="#about" class="nav_link">
-                            <i class="uil uil-user nav_icon"></i>ABOUT
+                            <i class="uil uil-user nav_icon"></i>
+                            <span class="nav_label">About</span>
                         </a>
                     </li>
 
                     <li class="nav_item">
                         <a href="#skills" class="nav_link">
-                            <i class="uil uil-file-alt nav_icon"></i>SKILLS
+                            <i class="uil uil-file-alt nav_icon"></i>
+                            <span class="nav_label">Skills</span>
                         </a>
                     </li>
 
                     <li class="nav_item">
                         <a href="#portfolio" class="nav_link">
-                            <i class="uil uil-scenery nav_icon"></i>PORTFOLIO
+                            <i class="uil uil-scenery nav_icon"></i>
+                            <span class="nav_label">Portfolio</span>
                         </a>
                     </li>
 
                     <li class="nav_item">
                         <a href="#contact" class="nav_link">
-                            <i class="uil uil-message nav_icon"></i>CONTACT ME
+                            <i class="uil uil-message nav_icon"></i>
+                            <span class="nav_label">Contact</span>
                         </a>
                     </li>
-
-                    <li class="nav_item">
-                        <a class="nav_link">
-                            <i class="uil uil-times nav_icon" id="nav-close"></i><b class="nav_icon_close">CLOSE</b>
-                        </a>
-                    </li>
-                    
                 </ul>
-                
-                </div>
-
-                <div class="nav_btns">
-
-                    <!-- dark and light themes button -->
-                    <i class="uil uil-moon change-theme" id="theme-button"></i>
-
-                    <div class="nav_toggle" id="nav-toggle">
-                        <i class="uil uil-apps"></i>
-                    </div>
                 </div>
             </nav>
         </header>
@@ -87,15 +74,15 @@
                     <div class="home_content grid">
                         
                         <div class="home_social">
-                            <a href="https://github.com/David-Shivulu" target="_blank" class="home_social_icon">
+                            <a href="https://github.com/David-Shivulu" target="_blank" class="home_social_icon" aria-label="GitHub">
                                 <i class="uil uil-github-alt"></i>
                             </a>
 
-                            <a href="https://twitter.com/DavidShivulu" target="_blank" class="home_social_icon">
-                                <i class="fa-brands fa-x-twitter"></i>
+                            <a href="https://wa.me/254795923160" target="_blank" class="home_social_icon" aria-label="WhatsApp">
+                                <i class="uil uil-whatsapp"></i>
                             </a>
 
-                            <a href="https://t.me/dave_xanderbilt" target="_blank" class="home_social_icon">
+                            <a href="https://t.me/dave_xanderbilt" target="_blank" class="home_social_icon" aria-label="Telegram">
                                 <i class="uil uil-telegram-alt"></i>
                             </a>
                         </div>
@@ -120,29 +107,27 @@
                                     -66.5 -61.9 -52.4 -69.5C-38.4 -77 -19.2 -74.8 -0.9 -73.6C17.5 -72.4 34.9 -72.3 44.9
                                     -63.4Z" transform="translate(121 107)"/>
 
-                                    <image class="home_img_bg_img" x='16' y='54' xlink:href=""/>
+                                    <image class="home_img_bg_img" x='32' y='57' width='100' height='120' xlink:href="assets/img/david_shivulu_PHOTO.png"/>
                                 </g>
                             </svg>
 
                         </div>
 
                         <div class="home_data_content">
-                            <h1 class="home_title">Hey, I'm David</h1>
-                            <h3 class="home_subtitle">I am a CS Student at UoE</h3>
-                            <P class="home_description">Aspiring to major in Artificial Intelligence and Machine Learning.</P>
-                            <a href="#contact" class="button button-flex">
-                                Contact Me <i class="uil uil-message button_icon"></i>
-                            </a>
+                            <h1 class="home_title">Hi, I'm <span class="home_name">David Shivulu</span></h1>
+                            <h2 class="home_subtitle">ML Engineer</h2>
+                            <p class="home_description">I'm a machine learning engineer building practical systems that turn data into reliable intelligence. I work across the ML lifecycle, from data and feature engineering to models and pipelines, with a focus on scaling ideas into production. I aim to create solutions that are clean, reproducible, and genuinely useful in real-world environments.</p>
+
+                            <div class="home_cta">
+                                <a href="#portfolio" class="button button-flex">
+                                    View Portfolio <i class="uil uil-briefcase-alt button_icon"></i>
+                                </a>
+                                <a href="#contact" class="button button-outline button-flex">
+                                    Get In Touch <i class="uil uil-message button_icon"></i>
+                                </a>
+                            </div>
                         </div>
 
-                    </div>
-                    
-                    <div class="home_scroll">
-                        <a href="#about" class="home_scroll-button button-flex">
-                            <i class="uil uil-mouse-alt home_scroll-mouse"></i>
-                            <span class="home_scroll-name">Scroll Down</span>
-                            <i class="uil uil-arrow-down home_scroll-arrow"></i>
-                        </a>
                     </div>
                 </div>
             </section>
@@ -150,14 +135,18 @@
             <!--==================== ABOUT ====================-->
             <section class="about section" id="about">
                 <h2 class="section_title">About Me</h2>
-                <span class="section_subtitle">My Introduction</span>
+                <span class="section_subtitle">Building intelligent systems from the ground up</span>
 
                 <div class="about_container container grid">
-                    <img src="assets/img/portfolio3.jpg" alt="about_img" class="about_img">
+                    <img src="assets/img/david-shivulu-ABOUT.png" alt="about_img" class="about_img">
 
                     <div class="about_content">
                         <p class="about_description">
-                            Currently, I develop professional websites and logos. Get to know more about me,
+                            Machine learning engineer focused on building production-grade ML systems. I work across the full ML lifecycle, from data pipelines and feature engineering to model training and deployment. My approach is pragmatic. Clean code, solid foundations, and solutions that actually work in production.
+                        </p>
+
+                        <p class="about_description">
+                            Beyond ML work, I produce music in FL Studio, play piano, and have a deep interest in space exploration. These pursuits keep me balanced and bring different creative perspectives to technical problem-solving.
                         </p>
 
                         <div class="about_button">
@@ -172,147 +161,331 @@
             <!--==================== SKILLS ====================-->
             <section class="skills section" id="skills">
                 <h2 class="section_title">Skills</h2>
-                <span class="section_subtitle">My Technical SKills</span>
-                
-                    <div class="skills_container">
-                        <!--==================== SKILL 1 ====================-->
-                        <div class="skills_content">
-                            <div>
-                                <i class="fa-solid fa-code skills_icon"></i>
-                                <h1 class="skills_title">Frontend Web Development</h1>
-                                <span class="skills_subtitle">Well versed in HTML, CSS, and JS, thus creating fully responsive professional websites.</span>
-                            </div>
-                        </div>
+                <span class="section_subtitle">My technical stack and tools</span>
 
-                        <!--==================== SKILL 2 ====================-->
-                        <div class="skills_content">
-                                <div>
-                                    <i class="uil uil-edit skills_icon"></i>
-                                    <h1 class="skills_title">Logo Designing</h1>
-                                    <span class="skills_subtitle">I design professional logos using tools such as Figma, Canva, and GIMP.</span>
-                                </div>
-                        </div>
-                        <!--==================== SKILL 3 ====================-->
-                        <div class="skills_content">
-                                <div>
-                                    <i class="uil uil-microsoft skills_icon"></i>
-                                    <h1 class="skills_title">OS Installation</h1>
-                                    <span class="skills_subtitle">Comfortable with installing various Operating Systems, ranging from Windows to some of the major Linux Distros such as Kali and Ubuntu.</span>
-                                </div>
-                        </div>
-
-                        <!--==================== SKILL 4 ====================-->
-                        <div class="skills_content">
-                                <div>
-                                    <i class="fa-solid fa-laptop-medical skills_icon"></i>
-                                    <h1 class="skills_title">Troubleshooting Techniques</h1>
-                                    <span class="skills_subtitle">I also perform basic computer troubleshooting techniques using various troubleshooters and the command-line.</span>
-                                </div>
+                <div class="skills_container container">
+                    <!-- Languages & Core Tools -->
+                    <div class="skills_card">
+                        <h3 class="skills_card_title">Languages & Core Tools</h3>
+                        <div class="skills_badges">
+                            <span class="skill_chip">
+                                <i class="fa-brands fa-python"></i> Python
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-database"></i> SQL
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-terminal"></i> Bash
+                            </span>
                         </div>
                     </div>
+
+                    <!-- ML & Data Science -->
+                    <div class="skills_card">
+                        <h3 class="skills_card_title">ML & Data Science</h3>
+                        <div class="skills_badges">
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-brain"></i> Scikit-learn
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-table"></i> Pandas
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-square-root-alt"></i> NumPy
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i> Feature Engineering
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-sitemap"></i> Data Pipelines
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-chart-line"></i> Model Training
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-book"></i> Jupyter
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-code-branch"></i> MLRun
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-server"></i> Nuclio
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-cube"></i> Iguazio
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-fire"></i> PySpark
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Infrastructure & DevOps -->
+                    <div class="skills_card">
+                        <h3 class="skills_card_title">Infrastructure & DevOps</h3>
+                        <div class="skills_badges">
+                            <span class="skill_chip">
+                                <i class="fa-brands fa-git-alt"></i> Git
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-brands fa-docker"></i> Docker
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-database"></i> PostgreSQL
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-brands fa-linux"></i> Linux
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-brands fa-aws"></i> AWS
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-brands fa-google"></i> GCP
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-dharmachakra"></i> Kubernetes
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-gears"></i> Jenkins
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-stream"></i> Kafka
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-diagram-project"></i> n8n
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Creative -->
+                    <div class="skills_card">
+                        <h3 class="skills_card_title">Creative</h3>
+                        <div class="skills_badges">
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-music"></i> FL Studio
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-headphones"></i> Music Production
+                            </span>
+                            <span class="skill_chip">
+                                <i class="fa-solid fa-piano"></i> Playing Piano
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </section>
             
             <!--==================== PORTFOLIO ====================-->
             <section class="portfolio section" id="portfolio">
                 <h2 class="section_title">Portfolio</h2>
-                <span class="section_subtitle">My Recent Work</span>
+                <span class="section_subtitle">My work, achievements, and experience</span>
 
-                <div class="portfolio_container container swiper-container">
-                    
-                    <div class="swiper-wrapper w3-content w3-display-container">
-                        <!--==================== PORTFOLIO 1 ====================-->
-                        <div class="portfolio_content grid swiper-slide mySlides w3-animate-left">
+                <!-- PROJECTS SUBSECTION -->
+                <div class="portfolio_subsection">
+                    <h3 class="subsection_title">Projects</h3>
 
-                            <div class="column_display">
-                            <img src="assets/img/portfolio2.jpg" alt="" class="portfolio_img">
+                    <div class="projects_grid">
+                        <!--==================== PROJECT 1 ====================-->
+                        <div class="project_card">
+                            <div class="project_image_wrapper">
+                                <img src="assets/img/portfolio2.jpg" alt="Feature Engineering Engine" class="project_image">
                             </div>
+                            <div class="project_card_content">
+                                <h3 class="project_card_title">LLM-Powered Feature Engineering Engine</h3>
+                                <p class="project_card_description">Built an intelligent feature engineering engine leveraging LLMs for automated feature engineering and management across ML pipelines.</p>
 
-                            <div class="column_display">
-                            <div class="portfolio_data">
-                                <h3 class="portfolio_title">My Portfolio Website</h3>
-                                <p class="portfolio_description">A fully responsive website.</p>
-                                <a href="#" class="button button-flex button-small portfolio_button">
-                                    Preview
-                                    <i class="uil uil-arrow-right button_icon"></i>
+                                <div class="project_tech_stack">
+                                    <span class="tech_badge">OpenAI</span>
+                                    <span class="tech_badge">PostgreSQL</span>
+                                    <span class="tech_badge">Python</span>
+                                    <span class="tech_badge">Linux</span>
+                                    <span class="tech_badge">Bash</span>
+                                </div>
+
+                                <a href="https://github.com/David-Shivulu" target="_blank" class="project_demo_button">
+                                    See Demo <i class="uil uil-arrow-right"></i>
                                 </a>
                             </div>
-                            </div>
                         </div>
 
-                        <!--==================== PORTFOLIO 2 ====================-->
-                        <div class="portfolio_content grid swiper-slide mySlides w3-animate-left">
-
-                            <div class="column_display">
-                            <img src="assets/img/portfolio1.jpg" alt="" class="portfolio_img">
+                        <!--==================== PROJECT 2 ====================-->
+                        <div class="project_card">
+                            <div class="project_image_wrapper project_image_wrapper--multiple">
+                                <img src="assets/img/pft-landing.jpg" alt="Personal Finance Tracker Landing" class="project_image">
+                                <img src="assets/img/pft-wc.jpg" alt="Personal Finance Tracker Welcome" class="project_image">
+                                <img src="assets/img/pft-home.jpg" alt="Personal Finance Tracker Home" class="project_image">
                             </div>
+                            <div class="project_card_content">
+                                <h3 class="project_card_title">Personal Finance Tracker</h3>
+                                <p class="project_card_description">Developed a mobile app for tracking expenses and income with AI-powered insights and real-time data sync via Firebase.</p>
 
-                            <div class="column_display">
-                            <div class="portfolio_data">
-                                <h3 class="portfolio_title">Recent Logos</h3>
-                                <p class="portfolio_description">Unique company and brand logos</p>
-                                <a href="#home" class="button button-flex button-small portfolio_button">
-                                    Preview
-                                    <i class="uil uil-arrow-right button_icon"></i>
+                                <div class="project_tech_stack">
+                                    <span class="tech_badge">Python</span>
+                                    <span class="tech_badge">Kivy</span>
+                                    <span class="tech_badge">KivyMD</span>
+                                    <span class="tech_badge">Firebase</span>
+                                    <span class="tech_badge">OpenAI</span>
+                                </div>
+
+                                <a href="https://github.com/David-Shivulu" target="_blank" class="project_demo_button">
+                                    See Demo <i class="uil uil-arrow-right"></i>
                                 </a>
                             </div>
+                        </div>
+
+                        <!--==================== PROJECT 3 ====================-->
+                        <div class="project_card">
+                            <div class="project_image_wrapper">
+                                <img src="assets/img/chain-bridge.png" alt="ChainBridge" class="project_image">
+                            </div>
+                            <div class="project_card_content">
+                                <h3 class="project_card_title">ChainBridge</h3>
+                                <p class="project_card_description">Instant crypto to M-Pesa money transfer app built for a fintech hackathon. Enables seamless blockchain-to-mobile-money transfers.</p>
+
+                                <div class="project_tech_stack">
+                                    <span class="tech_badge">Node.js</span>
+                                    <span class="tech_badge">WalletConnect API</span>
+                                    <span class="tech_badge">Payhero API</span>
+                                </div>
+
+                                <a href="https://github.com/David-Shivulu" target="_blank" class="project_demo_button">
+                                    See Demo <i class="uil uil-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
-
                     </div>
-
-                    <div class="swiper-button-next">
-                        <i class="uil uil-angle-right-b swiper-portfolio-icon" onclick="plusDivs(1)"></i>
-                    </div>
-                
                 </div>
-            </section>
 
-            <!--==================== PROJECT IN MIND ====================-->
-            <section class="project section">
-                <div class="project_bg">
-                    <div class="project_container container grid">
-                        <div class="project_data">
-                            <h2 class="project_title">Having a New Project?</h2>
-                            <p class="project_description">Get in touch with me right now and get upto 30% discount on your project.</p>
+                <!-- BADGES SUBSECTION -->
+                <div class="portfolio_subsection">
+                    <h3 class="subsection_title">Badges & Certifications</h3>
 
-                            <a href="#contact" class="button button-flex button-white">
-                                Contact Me
-                                <i class="uil uil-message project_icon button_icon"></i>
-                            </a>
+                    <div class="badges_grid">
+                        <div class="badge_item">
+                            <div class="badge_image">
+                                <img src="assets/badges/Android Studio User Badge - 2022.svg" alt="Android Studio User Badge">
+                            </div>
+                            <p class="badge_name">Android Studio User</p>
+                            <p class="badge_year">2022</p>
                         </div>
+                        <div class="badge_item">
+                            <div class="badge_image">
+                                <img src="assets/badges/Apply Machine Learning - 2025.png" alt="Applying ML">
+                            </div>
+                            <p class="badge_name">Applying ML</p>
+                            <p class="badge_year">2025</p>
+                        </div>
+                        <div class="badge_item">
+                            <div class="badge_image">
+                                <img src="assets/badges/GDG UoE Data Science & AI Lead - 2025.svg" alt="GDG UoE DS & AI Lead">
+                            </div>
+                            <p class="badge_name">GDG UoE DS & AI Lead</p>
+                            <p class="badge_year">2025</p>
+                        </div>
+                        <div class="badge_item">
+                            <div class="badge_image">
+                                <img src="assets/badges/Getting Started With Machine Learning - 2025.png" alt="Getting Started With Machine Learning">
+                            </div>
+                            <p class="badge_name">Getting Started With ML</p>
+                            <p class="badge_year">2025</p>
+                        </div>
+                        <div class="badge_item">
+                            <div class="badge_image">
+                                <img src="assets/badges/Google Developer Learning - 2026.svg" alt="Google Developer Learning">
+                            </div>
+                            <p class="badge_name">Google Dev Learning</p>
+                            <p class="badge_year">2026</p>
+                        </div>
+                        <div class="badge_item">
+                            <div class="badge_image">
+                                <img src="assets/badges/Linear Regression Models - 2025.png" alt="LRM">
+                            </div>
+                            <p class="badge_name">LRM</p>
+                            <p class="badge_year">2025</p>
+                        </div>
+                    </div>
 
-                        <img src="assets/img/portfolio3.jpg" alt="" class="project_img">
+                    <div class="certificates_grid">
+                        <a href="assets/pdf/Machine Learning For Associates (101).pdf" target="_blank" class="certificate_card">
+                            <i class="uil uil-award certificate_icon"></i>
+                            <h4 class="certificate_title">Machine Learning For Associates</h4>
+                            <p class="certificate_issuer">Safaricom Grow - Skillsoft</p>
+                            <p class="certificate_date">2025</p>
+                            <span class="certificate_link">
+                                <i class="uil uil-file-download-alt"></i> View Certificate
+                            </span>
+                        </a>
+                        <a href="assets/pdf/SQL Developer.pdf" target="_blank" class="certificate_card">
+                            <i class="uil uil-award certificate_icon"></i>
+                            <h4 class="certificate_title">Oracle 12c SQL Developer</h4>
+                            <p class="certificate_issuer">Safaricom Grow - Skillsoft</p>
+                            <p class="certificate_date">2025</p>
+                            <span class="certificate_link">
+                                <i class="uil uil-file-download-alt"></i> View Certificate
+                            </span>
+                        </a>
+                        <a href="assets/pdf/Applying Machine Learning.pdf" target="_blank" class="certificate_card">
+                            <i class="uil uil-award certificate_icon"></i>
+                            <h4 class="certificate_title">Applying Machine Learning</h4>
+                            <p class="certificate_issuer">Safaricom Grow - Skillsoft</p>
+                            <p class="certificate_date">2025</p>
+                            <span class="certificate_link">
+                                <i class="uil uil-file-download-alt"></i> View Certificate
+                            </span>
+                        </a>
                     </div>
                 </div>
+
+                <!-- WORK EXPERIENCE SUBSECTION -->
+                <div class="portfolio_subsection">
+                    <h3 class="subsection_title">Work Experience</h3>
+
+                    <div class="experience_timeline">
+                        <div class="timeline_item">
+                            <div class="timeline_dot"></div>
+                            <div class="timeline_content">
+                                <h4 class="experience_title">MLOps Intern</h4>
+                                <p class="experience_company">Safaricom PLC</p>
+                                <p class="experience_period">June 2025 - September 2025</p>
+                                <p class="experience_description">Worked on developing an LLM-powered Feature Engineering Engine at Safaricom PLC, supporting ML workflows from data ingestion to feature serving. Built and managed pipelines using Iguazio, Docker, Airflow, Apache Doris, and PostgreSQL. Gained hands-on experience with production ML infrastructure and learned how data systems, orchestration, and LLM tooling integrate in real-world environments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
             <!--==================== CONTACT ME ====================-->
             <section class="contact section" id="contact">
                 <h2 class="section_title">Contact Me</h2>
-                <span class="section_subtitle">Get in touch</span>
+                <span class="section_subtitle">Let's work together</span>
 
-                <div class="contact_container container grid">
-                    <div>
-                        <div class="contact_information">
-                            <i class="uil uil-phone contact_icon"></i>
+                <div class="contact_container container">
 
-                            <div>
-                                <h3 class="contact_title">Phone Number</h3>
-                                <span class="contact_subtitle">+254 795 923160</span>
-                            </div>
+                    <div class="contact_card">
+                        <i class="uil uil-whatsapp contact_icon"></i>
+                        <div class="contact_info">
+                            <h3 class="contact_title">WhatsApp</h3>
+                            <a href="https://wa.me/254795923160" target="_blank" class="contact_link">+254 795 923160</a>
                         </div>
-
-                        <div class="contact_information">
-                            <i class="uil uil-envelope contact_icon"></i>
-
-                            <div>
-                                <h3 class="contact_title">Email Address</h3>
-                                <span class="contact_subtitle">davidxanderbilt@gmail.com</span>
-                            </div>
-                        </div>
-
                     </div>
-                    
+
+                    <div class="contact_card">
+                        <i class="uil uil-envelope contact_icon"></i>
+                        <div class="contact_info">
+                            <h3 class="contact_title">Email</h3>
+                            <a href="mailto:davidxanderbilt@gmail.com" class="contact_link">davidxanderbilt@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact_card">
+                        <i class="uil uil-github-alt contact_icon"></i>
+                        <div class="contact_info">
+                            <h3 class="contact_title">GitHub</h3>
+                            <a href="https://github.com/David-Shivulu" target="_blank" class="contact_link">@David-Shivulu</a>
+                        </div>
+                    </div>
+
                 </div>
             </section>
             
@@ -321,28 +494,40 @@
         <!--==================== FOOTER ====================-->
         <footer class="footer">
             <div class="footer_bg">
-                <div class="footer_container container grid">
+                <div class="footer_container container">
 
-                    <div class="footer_logo footer_display">
-                        <img src="assets/img/logo.png" alt="logo">
+                    <div class="footer_logo">
+                        <img src="assets/img/logo.png" alt="David Shivulu Logo">
                     </div>
 
-                    <div class="footer_socials footer_display">
-                        <a href="https://github.com/David-Shivulu" target="_blank" class="footer_social">
+                    <div class="footer_info">
+                        <h3 class="footer_title">David Shivulu Anyanje</h3>
+                        <span class="footer_subtitle">ML Engineer</span>
+                        <p class="footer_copyright">&#169; 2026 All Rights Reserved.</p>
+                    </div>
+
+                    <div class="footer_socials">
+                        <a href="https://github.com/David-Shivulu" target="_blank" class="footer_social" aria-label="GitHub">
                             <i class="uil uil-github-alt"></i>
                         </a>
 
-                        <a href="https://twitter.com/DavidShivulu" target="_blank" class="footer_social">
-                            <i class="fa-brands fa-x-twitter"></i>
+                        <a href="https://wa.me/254795923160" target="_blank" class="footer_social" aria-label="WhatsApp">
+                            <i class="uil uil-whatsapp"></i>
                         </a>
 
-                        <a href="https://wa.me/254795923160" target="_blank" class="footer_social">
-                            <i class="uil uil-whatsapp"></i>
+                        <a href="https://soundcloud.com/rare-of-breed" target="_blank" class="footer_social" aria-label="SoundCloud">
+                            <i class="fa-brands fa-soundcloud"></i>
+                        </a>
+
+                        <a href="https://t.me/dave_xanderbilt" target="_blank" class="footer_social" aria-label="Telegram">
+                            <i class="uil uil-telegram-alt"></i>
+                        </a>
+
+                        <a href="mailto:davidxanderbilt@gmail.com" target="_blank" class="footer_social" aria-label="Email">
+                            <i class="uil uil-envelope"></i>
                         </a>
                     </div>
                 </div>
-
-                <p class="footer_copyright">David Shivulu<br>All Rights Reserved<br>&#169; 2024 </p>
             </div>
         </footer>
         
